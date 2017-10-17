@@ -1,5 +1,6 @@
 package co.za.damien.chapter4.functional.interfaces;
 
+import java.util.function.BiFunction;
 import java.util.function.Function;
 
 /**
@@ -11,7 +12,18 @@ public class FunctionAndBiFunctionExample {
 
     public static void main(String[] args) {
         functionExample();
+        biFunctionExample();
+    }
 
+    private static void biFunctionExample() {
+        // First two types are inputs and the third is the result
+
+        //first param is used as the object concat is called on, and the second is the string added
+        BiFunction<String, String, String> bi1 = String::concat;
+        BiFunction<String, String, String> bi2 = (string, toAdd) -> string.concat(toAdd);
+
+        System.out.println("bifunction1 - concat string a and string b and return a string ->" + bi1.apply("a", "b"));
+        System.out.println("bifunction2 - concat string a and string b and return a string ->" + bi1.apply("c", "d"));
     }
 
     private static void functionExample() {
@@ -24,5 +36,6 @@ public class FunctionAndBiFunctionExample {
         /**
          * function1 - return length of abc =3
          * function2 - return length of abc =3
-         */}
+         */
+    }
 }

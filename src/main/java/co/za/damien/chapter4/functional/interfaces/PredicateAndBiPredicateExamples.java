@@ -8,6 +8,8 @@ import java.util.function.Predicate;
  * BiPredicate - takes two inputs
  *
  * Contains default methods - and, negate, or
+ *
+ * NOTE : PRedicate returns boolean primitive and not an Object
  */
 public class PredicateAndBiPredicateExamples {
     public static void main(String[] args) {
