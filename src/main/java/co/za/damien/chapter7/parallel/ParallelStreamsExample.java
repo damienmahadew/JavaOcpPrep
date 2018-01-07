@@ -69,6 +69,32 @@ public class ParallelStreamsExample {
          * stream object reduce() combines a stream into a single object, first object = identity,
          * second = accumulator, and third is combiner
          */
+
+        System.out.println(Arrays.asList('w', 'o', 'l', 'f')
+                .stream()
+                .reduce("",
+                        (c, s1)-> c + s1,
+                        (s2, s3) -> s2 + s3));
+        //output = wolf
+
+        /**
+         * in parallel streams the reduce method works by applying the reduction to paris of elements
+         * within the stream to create intermediate values, then combining those values to produce the final
+         * result
+         *
+         * A serial stream , wolf was build one character at a time, in a parallel stream the intermediate strings
+         * wo and lf could have been created then combined.
+         *
+         * With parallel streams we have to be concerned about the order. The Streams API
+         * prevents this problem while still allowing streams to be processed in parallel, as along
+         * as the arguments to reduce() adhere to certain principles
+         *
+         * Requirements for reduce()
+         */
     }
 
+    public static void main(String[] args) {
+        ParallelStreamsExample parallelStreamsExample = new ParallelStreamsExample();
+        parallelStreamsExample.parallelReductionExamples();
+    }
 }
