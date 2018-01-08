@@ -10,7 +10,7 @@ public class LocalInnerClassExample {
 
     public void testingLocalInnerClasses() {
         //This has to be final - referred to as effectively final
-        final int width = 10;
+        int width = 10;
 
         /**
          * Cannot have an access modifier
@@ -23,7 +23,6 @@ public class LocalInnerClassExample {
                 print(width * length);
             }
         }
-
         LocalInner inner = new LocalInner();
         inner.multiply();
     }

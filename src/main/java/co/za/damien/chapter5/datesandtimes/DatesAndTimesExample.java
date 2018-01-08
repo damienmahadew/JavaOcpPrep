@@ -8,6 +8,8 @@ public class DatesAndTimesExample {
     //UCT - coordinated universal time - can be expressed in different ways - +02:00, GMT+2, and UTC+2
     //NOTE:- java exam uses MM/dd/YYYY
     //NOTE: there are no constructors!
+    //NOTE : these classes are immutable
+    //epoch - 1 Jan 1970 (GMT)- Java used it because Unix used it
     //If you pass invalid parameters to .of(), you get a DateTimeException
 
     //Four type of dates and times
@@ -28,7 +30,20 @@ public class DatesAndTimesExample {
         createZonedDateTimes();
         printZones();
         manipulatingDates();
-        //stopped at page 242
+        epochExamples();
+    }
+
+
+
+    private static void epochExamples() {
+        LocalDate localDate = LocalDate.now();
+        Long epochLocalDate = localDate.toEpochDay();
+        System.out.println("Days since 1 Jan 1970 = " + epochLocalDate);
+
+        LocalDateTime localDateTime = LocalDateTime.now();
+        Long epochLocalDateTime = localDateTime.toEpochSecond(ZoneOffset.UTC);
+        ZonedDateTime zonedDateTime = ZonedDateTime.now();
+        Long epochZonedDateTime = zonedDateTime.toEpochSecond();
     }
 
     private static void manipulatingDates() {
@@ -43,6 +58,12 @@ public class DatesAndTimesExample {
         System.out.println("localdate + 2 months =" + months);
         LocalDate years = localDate.plusYears(2);
         System.out.println("localdate + 2 years =" + years);
+
+        //the below is common
+        LocalDate localDate1 = LocalDate.of(2017, Month.APRIL, 5);
+        LocalTime localTime = LocalTime.of(12,12);
+        LocalDateTime localDateTime = LocalDateTime.of(localDate1, localTime).minusDays(3).minusMinutes(5);
+
     }
 
     private static void printZones() {
