@@ -63,4 +63,5 @@ public class OptionalExample {
         //the line below does not compile, expects a double but throws an exception instead
 //        System.out.println(optional.orElseGet(() -> new IllegalStateException()));
     }
+
 }

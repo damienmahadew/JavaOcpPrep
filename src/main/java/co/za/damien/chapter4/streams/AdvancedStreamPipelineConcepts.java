@@ -184,10 +184,10 @@ public class AdvancedStreamPipelineConcepts {
 
         //mapping collector that lets us go down another level and add another collector e.g. we wanted to
         //get the first letter of the first animal alphabetically of each length.
-        Map<Integer, Optional<Character>> hecticMap = stringStream.collect(
-                Collectors.groupingBy(String::length, Collectors.mapping(s-> s.charAt(0),
-                        Collectors.minBy(Comparator.naturalOrder())))
-        );
+//        Map<Integer, Optional<Character>> hecticMap = stringStream.collect(
+//                Collectors.groupingBy(String::length, Collectors.mapping(s-> s.charAt(0),
+//                        Collectors.minBy(Comparator.naturalOrder())))
+//        );
 
     }
 
