@@ -176,8 +176,8 @@ public class InteractingWithPathsAndFilesExamples {
         Path path3 = Paths.get("E:\\data");
         Path path4 = Paths.get("E:\\user\\home");
         Path relativePath = path3.relativize(path4);
-        System.out.println(path3.resolve(relativePath)); //output is E:\data\..\user\home
-        System.out.println(path3.resolve(relativePath).normalize()); //output is E:\user\home
+        System.out.println(path3.resolve(relativePath)); /** //output is E:\\data\\..\\user\\home */
+        System.out.println(path3.resolve(relativePath).normalize()); /** //output is E:\\user\\home */
     }
 
     private void toRealPathExamples() throws IOException {
