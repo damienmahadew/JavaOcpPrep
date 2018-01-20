@@ -3,7 +3,7 @@ package co.za.damien.chapter4.streams;
 import java.util.stream.Stream;
 
 /**
- * Streams allow you to use chaining and express what youu ant to accomplish rather than how to do so.
+ * Streams allow you to use chaining and express what you want to accomplish rather than how to do so.
  */
 public class PipelineExamples {
 

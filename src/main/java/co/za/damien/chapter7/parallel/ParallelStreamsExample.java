@@ -78,7 +78,7 @@ public class ParallelStreamsExample {
         //output = wolf
 
         /**
-         * in parallel streams the reduce method works by applying the reduction to paris of elements
+         * in parallel streams the reduce method works by applying the reduction to pairs of elements
          * within the stream to create intermediate values, then combining those values to produce the final
          * result
          *

@@ -25,7 +25,7 @@ import java.util.List;
  *  Reader/Writer classes - inputting/outputting only character and string data
  *      ** Reader/Writers are still streams
  *
- * You can use Writer to output a string to afile without worrying about the underlying byte encoding
+ * You can use Writer to output a string to a file without worrying about the underlying byte encoding
  *
  * All Input classes have corresponding output classes e.g. FileReader/FileWriter
  * except PrintWriter and PrintStream
@@ -250,6 +250,8 @@ public class StreamExamples {
         printWriter.print(5); //printwriter method
         printWriter.write(String.valueOf(5)); //writer method
 
+        boolean checkError = printWriter.checkError();
+
         Animal animal = new Animal();
         animal.setTestVariable("testVar");
 
@@ -263,6 +265,7 @@ public class StreamExamples {
 
     public static void main(String[] args) throws Exception {
         StreamExamples streamExamples = new StreamExamples();
-        streamExamples.understandingObjectCreation();
+//        streamExamples.understandingObjectCreation();
+        streamExamples.printStreamWriterExamples();
     }
 }

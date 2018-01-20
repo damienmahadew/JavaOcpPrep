@@ -86,13 +86,16 @@ public class PrimitivesExamples {
 
         //Primitive Stream methods add two new methods added to min(), max(), findAny() which return Optional values.
         //sum() and avg()
-        int sum = stream.sum();
+        int intSum = stream.sum();
+        DoubleStream d  = stream.mapToDouble(Double::new);
+        double sum = d.sum();
         /**
          * Optional types for primitives
          *                              OptionalDouble          OptionalInt             OptionalLong
          * Getting as primitive         getAsDouble()           getAsInt()              getAsLong()
          * orElseGet(parameter type)    DoubleSupplier          IntSupplier             LongSupplier
          * return type of max()         OptionalDouble          OptionalInt             OptionalLong
+         * return type of min()         OptionalDouble          OptionalInt             OptionalLong
          * return type of sum           double                  int                     long
          * return type of avg           OptionalDouble          OptionalDouble          OptionalDouble
          */

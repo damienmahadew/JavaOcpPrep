@@ -25,6 +25,7 @@ public class ConsumerAndBiConsumerExample {
 
         biConsumer1.accept("chicken", 1);
         biConsumer2.accept("beef", 0);
+        biConsumer1.andThen(biConsumer2);
         System.out.println("biconsumer1 + biconsumer2 map =" + someMap);
         //biconsumer1 + biconsumer2 map ={chicken=1, beef=0}
     }

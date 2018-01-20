@@ -38,47 +38,47 @@ public class FileExamples {
         File testFile = new File("c:\\temp\\parent\\child\\file.txt");
         //exists() -
         boolean exists = testFile.exists();
-        System.out.println("exists = " + exists);
+        System.out.println("exists = " + exists); //exists = true
 
         //getName()
         String name = testFile.getName();
-        System.out.println("name = " + name);
+        System.out.println("name = " + name); //name = file.txt
 
         //getAbosultePath()
         String absolutePath = testFile.getAbsolutePath();
-        System.out.println("absolutePath = " + absolutePath);
+        System.out.println("absolutePath = " + absolutePath); //absolutePath = c:\temp\parent\child\file.txt
 
         //isDirectory()
         boolean isDirectory = testFile.isDirectory();
-        System.out.println("isDirectory = " + isDirectory);
+        System.out.println("isDirectory = " + isDirectory); //isDirectory = true
 
-        boolean isFile = testFile.isFile();
+        boolean isFile = testFile.isFile(); //isFile = false
         System.out.println("isFile = " + isFile);
 
-        long length = testFile.length();
+        long length = testFile.length();  //length = 0
         System.out.println("length = " + length);
 
         long lastModified = testFile.lastModified();
-        System.out.println("lastModified = " + lastModified);
+        System.out.println("lastModified = " + lastModified); //lastModified = 1515232753590
 
         boolean delete = testFile.delete();
-        System.out.println("delete = " + delete);
+        System.out.println("delete = " + delete); //delete = true
 
         boolean renameTo = testFile.renameTo(new File("newTestFile.txt"));
-        System.out.println("renameTo = " + renameTo);
+        System.out.println("renameTo = " + renameTo);  //renameTo = false
 
         //creates a directory named by this path
         boolean mkdir = testFile.mkdir();
-        System.out.println("mkdir = " + mkdir);
+        System.out.println("mkdir = " + mkdir); //mkdir = true
 
         //creates the directory named by this path including non existing parent directories
         boolean mkdirs = testFile.mkdirs();
-        System.out.println("mkdirs = " + mkdirs);
+        System.out.println("mkdirs = " + mkdirs); //mkdirs = false
 
         //abstract pathname of this abstract pathnames parent or null if this pathname does not
         //name a parent directory
         String parent = testFile.getParent();
-        System.out.println("parent = " + parent);
+        System.out.println("parent = " + parent); //parent = c:\temp\parent\child
 
         File[] files = testFile.listFiles();
         System.out.println("list of files");

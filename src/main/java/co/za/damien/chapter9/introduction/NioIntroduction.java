@@ -4,7 +4,7 @@ package co.za.damien.chapter9.introduction;
  * NIO.2 - Java API version 2 for IO.
  * Non Blocking IO
  *
- * Java created NIO in version 4 - introduced bufferes and channels in place of streams,
+ * Java created NIO in version 4 - introduced buffers and channels in place of streams,
  * load data from file into a temporary buffer, that unlike byte streams can be read forward
  * and backward without blocking on the underlying source
  *

@@ -10,11 +10,11 @@ import java.util.ResourceBundle;
  *
  * Java handles the logic for picking up the best resource bundle for a given key
  * tries to find the most specific value, when there is a tie, bundles are given preference
- * 1. Always lok for the property file after the matching java class
+ * 1. Always look for the property file after the matching java class
  * 2. Drop one thing at a time if there are no matches, first drop the country
  * 3. Look at the default locale and the default resource bundle last
  *
- * Java isnt required to get all of the keys from the same resource bundle. It can get them from any parent
+ * Java isn't required to get all of the keys from the same resource bundle. It can get them from any parent
  * of the matching resource bundle. A parent resource bundle in the hierarchy just removes components
  * of the name until it gets to the top
  * e.g.

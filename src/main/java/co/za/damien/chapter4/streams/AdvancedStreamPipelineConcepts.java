@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.util.*;
 import java.util.function.Function;
 import java.util.function.Supplier;
+import java.util.function.ToDoubleFunction;
 import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
 
 /**
@@ -54,6 +56,9 @@ public class AdvancedStreamPipelineConcepts {
     }
 
     private void collectingResults() {
+        Stream<String> d = Stream.of("a");
+        ToDoubleFunction<String> doubleFunction = s -> s.length();
+        double ave = d.collect(Collectors.averagingDouble(s -> s.length()));
         /**
          * Many predefined collectors
          * Collector                                    Description                     Return value when passed to collect
@@ -163,7 +168,7 @@ public class AdvancedStreamPipelineConcepts {
 
         /**
          * Partitioning - special case of grouping
-         * two possible groups - tru and false, like splitting a list into two parts
+         * two possible groups - true and false, like splitting a list into two parts
          */
         //e.g. two signs, one that is for an animal with 5 or fewer characters in their name, and the other for animals
         //with more than 5
@@ -192,6 +197,7 @@ public class AdvancedStreamPipelineConcepts {
     }
 
     private void testException() {
+        //cannot throw exception in a supplier
 //        Supplier<List<String>> s = AdvancedStreamPipelineConcepts::throwCheckedException;
         //proper way
 //        Supplier<List<String>> s = () -> {

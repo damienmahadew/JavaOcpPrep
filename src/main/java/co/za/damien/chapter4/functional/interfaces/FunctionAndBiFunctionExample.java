@@ -6,7 +6,7 @@ import java.util.function.Function;
 /**
  * A function is responsible for turning one parameter into a value of a possibly different type
  * and returning it
- * Bifunction takes in two and returns two
+ * Bifunction takes in two and returns one
  */
 public class FunctionAndBiFunctionExample {
 

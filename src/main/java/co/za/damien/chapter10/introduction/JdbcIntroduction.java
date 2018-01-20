@@ -17,7 +17,7 @@ import java.sql.*;
  * 1. Java Database Connectivity Language (JDBC) - accesses data as rows and columns, JDBC is the api
  * covered in this chapter
  * <p>
- * 2. Java Persistence API (JPA) - acces data through objects using a concept called ORM - not in exam
+ * 2. Java Persistence API (JPA) - access data through objects using a concept called ORM - not in exam
  * <p>
  * Also get NoSQL - stores data in forms other than tables
  * <p>

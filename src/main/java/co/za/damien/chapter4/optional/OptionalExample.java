@@ -56,9 +56,11 @@ public class OptionalExample {
         //chooses other option if result is empty
         optional.orElse(Double.NaN);
 
-        optional.orElseGet(() -> Math.random());
+//        optional.orElseGet(() -> Math.random());
+        optional.orElseGet(Math::random);
 
         optional.orElseThrow(() -> new IllegalStateException());
+        optional.orElseThrow(IllegalStateException::new);
 
         //the line below does not compile, expects a double but throws an exception instead
 //        System.out.println(optional.orElseGet(() -> new IllegalStateException()));

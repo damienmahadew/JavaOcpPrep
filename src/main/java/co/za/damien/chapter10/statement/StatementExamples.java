@@ -5,7 +5,7 @@ import java.sql.*;
 /**
  * In order to run an SQL you need to tell a Statement about it
  *
- * Exam only focues on Statement, in the real world use PreparedStatement- increase in performance, security
+ * Exam only focuses on Statement, in the real world use PreparedStatement- increase in performance, security
  * and readability
  *
  * If you use the wrong sql statement e.g. executeUpdate("Select * from species");

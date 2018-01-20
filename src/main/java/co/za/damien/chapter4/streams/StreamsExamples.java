@@ -116,6 +116,10 @@ public class StreamsExamples {
 
         sortedOperation(s);
 
+        peekOperation(s);
+    }
+
+    private void peekOperation(Stream<String> s) {
         /**
          * peek() - allows us to peform stream oepration without actually changing the stream
          * Stream<T> peek(Consumer<? super T> action)
@@ -126,8 +130,6 @@ public class StreamsExamples {
          * Note peek is intended to perform an operation without changing the result
          * Bad practice to modify state
          */
-
-
     }
 
     private void sortedOperation(Stream<String> s) {
@@ -300,7 +302,7 @@ public class StreamsExamples {
          * based on a stream but not reduce the entire stream
          */
         Stream<String> infinite = Stream.generate(() -> "chimp");
-        s.findAny().ifPresent(System.out::println);
+        s.findFirst().ifPresent(System.out::println);
         infinite.findAny().ifPresent(System.out::println);
     }
 

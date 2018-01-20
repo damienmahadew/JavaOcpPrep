@@ -61,7 +61,7 @@ public class FunctionalInterfacesForPrimitives {
          * ToLongBiFunction<T, U>                       long            applyAsLong
          *
          * DoubleToIntFunction      1(double)           int             applyAsInt
-         * DoubleToIntFunction      1(double)           long            applyAsLong
+         * DoubleToLongFunction     1(double)           long            applyAsLong
          * IntToDoubleFunction      1(int)              double          applyAsDouble
          * IntToLongFunction        1(int)              long            applyAsLong
          * LongToDoubleFunction     1(long)             double          applyAsDouble

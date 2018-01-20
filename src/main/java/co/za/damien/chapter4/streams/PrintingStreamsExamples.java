@@ -1,7 +1,7 @@
 package co.za.damien.chapter4.streams;
 
 /**
- * Since intermediate operations dont run until needed, new techniques are needed to print streams
+ * Since intermediate operations don't run until needed, new techniques are needed to print streams
  *
  * Option                                               Works For Infinite Streams?         Destructive to Stream?
  * s.forEach(System.out::println)                       No                                  Yes
